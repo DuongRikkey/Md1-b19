@@ -54,20 +54,27 @@
 //     div.style.display = "none"
 // }
 
-// let main = document.getElementsByTagName("main")
-// let btnx = document.getElementById("btnx")
+let main = document.getElementsByTagName("main")
+let btnx = document.getElementById("btnx")
 
 // btnx.ondblclick = function () {
 //     main[0].classList.toggle("main")
-// } 
-colo
+// }
+
+// btnx.ondblclick = function () {
+//     if (main[0].classList.contains("main1")) {
+//         main[0].classList.remove("main1")
+//     } else {
+//         main[0].classList.add("main1")
+//     }
+// }
 
 
 
-const container = document.getElementById("list");
-for (let i = 0; i < 3; i++) {
-    container.insertAdjacentHTML("beforeBegin", `<li>${i}</li>`);
-    container.insertAdjacentHTML("afterbegin", `<li>${i}</li>`);
-    container.insertAdjacentHTML("beforeend", `<li>${i}</li>`);
-    container.insertAdjacentHTML("afterend", `<li>${i}</li>`);
-}
+// const container = document.getElementById("list");
+// for (let i = 0; i < 3; i++) {
+//     container.insertAdjacentHTML("beforeBegin", `<li>${i}</li>`);
+//     container.insertAdjacentHTML("afterbegin", `<li>${i}</li>`);
+//     container.insertAdjacentHTML("beforeend", `<li>${i}</li>`);
+//     container.insertAdjacentHTML("afterend", `<li>${i}</li>`);
+// }

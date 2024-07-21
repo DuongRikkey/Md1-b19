@@ -157,13 +157,39 @@
 // // 4 inputevent
 let btn = document.getElementById("btn")
 console.log(btn);
+let test1 = document.getElementById("test1")
+let test2 = document.getElementById("test2")
+let clickCount = 0; // Biến đếm số lần click
 
 // // btn.onclick// đưa vào trạng thái lắng nghe của người dùng
-btn.onclick = function () {
-    btn.innerHTML = `<img
-      id="img"
-      src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2023/09/hinh-nen-may-tinh-4k-cong-nghe-41.jpg"
-      alt=""
-    />`
+// btn.onclick = function () {
+//   // btn.innerHTML = `<img
+//   //     id="img"
+//   //     src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2023/09/hinh-nen-may-tinh-4k-cong-nghe-41.jpg"
+//   //     alt=""
+//   //   />`
+//   btn.innerHTML = "Đăng ký"
 
-}
+btn.onclick = function () {
+  if (clickCount % 2 === 0) {
+    // Lần click chẵn (0, 2, 4,...): Hiển thị nội dung "Đăng ký"
+    btn.innerHTML = "Đăng ký";
+    // Có thể thay đổi nội dung của test1, test2 tại đây nếu cần
+    let temp = test1.innerHTML;
+    test1.innerHTML = test2.innerHTML;
+    test2.innerHTML = temp;
+  } else {
+    // Lần click lẻ (1, 3, 5,...): Hiển thị lại nội dung ban đầu của button
+    btn.innerHTML = "Nội dung ban đầu"; // Thay đổi thành nội dung ban đầu của button
+    // Có thể thay đổi nội dung của test1, test2 tại đây nếu cần
+    // test1.innerHTML = t
+    let temp = test1.innerHTML;
+    test1.innerHTML = test2.innerHTML;
+    test2.innerHTML = temp;
+  }
+
+  clickCount++; // Tăng biến đếm lên sau mỗi lần click
+};
+
+// test1.innerHTML = test2.innerHTML
+// console.log(btn.scr);
